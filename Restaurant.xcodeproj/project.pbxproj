@@ -16,6 +16,17 @@
 		0EBEC1E725D31C2300928C23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC1E525D31C2300928C23 /* LaunchScreen.storyboard */; };
 		0EBEC1F225D31C2400928C23 /* RestaurantTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBEC1F125D31C2400928C23 /* RestaurantTests.swift */; };
 		0EBEC1FD25D31C2400928C23 /* RestaurantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBEC1FC25D31C2400928C23 /* RestaurantUITests.swift */; };
+		0EBEC21A25D31C7900928C23 /* ta-logo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC21025D31C7900928C23 /* ta-logo.pdf */; };
+		0EBEC21B25D31C7900928C23 /* ta-bubbles-full.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC21125D31C7900928C23 /* ta-bubbles-full.pdf */; };
+		0EBEC21C25D31C7900928C23 /* tf-logo.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC21225D31C7900928C23 /* tf-logo.pdf */; };
+		0EBEC21D25D31C7900928C23 /* ta-bubbles-half.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC21325D31C7900928C23 /* ta-bubbles-half.pdf */; };
+		0EBEC21E25D31C7900928C23 /* food.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC21425D31C7900928C23 /* food.pdf */; };
+		0EBEC21F25D31C7900928C23 /* share.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC21525D31C7900928C23 /* share.pdf */; };
+		0EBEC22025D31C7900928C23 /* location.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC21625D31C7900928C23 /* location.pdf */; };
+		0EBEC22125D31C7900928C23 /* solid-heart.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC21725D31C7900928C23 /* solid-heart.pdf */; };
+		0EBEC22225D31C7900928C23 /* cash.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC21825D31C7900928C23 /* cash.pdf */; };
+		0EBEC22325D31C7900928C23 /* ta-bubbles-empty.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC21925D31C7900928C23 /* ta-bubbles-empty.pdf */; };
+		0EBEC22525D31C8700928C23 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC22425D31C8700928C23 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +62,17 @@
 		0EBEC1F825D31C2400928C23 /* RestaurantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBEC1FC25D31C2400928C23 /* RestaurantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantUITests.swift; sourceTree = "<group>"; };
 		0EBEC1FE25D31C2400928C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EBEC21025D31C7900928C23 /* ta-logo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ta-logo.pdf"; sourceTree = "<group>"; };
+		0EBEC21125D31C7900928C23 /* ta-bubbles-full.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ta-bubbles-full.pdf"; sourceTree = "<group>"; };
+		0EBEC21225D31C7900928C23 /* tf-logo.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "tf-logo.pdf"; sourceTree = "<group>"; };
+		0EBEC21325D31C7900928C23 /* ta-bubbles-half.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ta-bubbles-half.pdf"; sourceTree = "<group>"; };
+		0EBEC21425D31C7900928C23 /* food.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = food.pdf; sourceTree = "<group>"; };
+		0EBEC21525D31C7900928C23 /* share.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = share.pdf; sourceTree = "<group>"; };
+		0EBEC21625D31C7900928C23 /* location.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = location.pdf; sourceTree = "<group>"; };
+		0EBEC21725D31C7900928C23 /* solid-heart.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "solid-heart.pdf"; sourceTree = "<group>"; };
+		0EBEC21825D31C7900928C23 /* cash.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = cash.pdf; sourceTree = "<group>"; };
+		0EBEC21925D31C7900928C23 /* ta-bubbles-empty.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "ta-bubbles-empty.pdf"; sourceTree = "<group>"; };
+		0EBEC22425D31C8700928C23 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +123,10 @@
 		0EBEC1D625D31BFE00928C23 /* Restaurant */ = {
 			isa = PBXGroup;
 			children = (
-				0EBEC1D725D31BFE00928C23 /* AppDelegate.swift */,
-				0EBEC1D925D31BFE00928C23 /* SceneDelegate.swift */,
-				0EBEC1DB25D31BFE00928C23 /* ViewController.swift */,
-				0EBEC1DD25D31BFE00928C23 /* Main.storyboard */,
-				0EBEC1E325D31C2300928C23 /* Assets.xcassets */,
-				0EBEC1E525D31C2300928C23 /* LaunchScreen.storyboard */,
-				0EBEC1E825D31C2300928C23 /* Info.plist */,
-				0EBEC1E025D31BFE00928C23 /* Restaurant.xcdatamodeld */,
+				0EBEC22825D31C9200928C23 /* Model */,
+				0EBEC22725D31C8F00928C23 /* View */,
+				0EBEC22625D31C8D00928C23 /* Controller */,
+				0EBEC20D25D31C4A00928C23 /* Support Files */,
 			);
 			path = Restaurant;
 			sourceTree = "<group>";
@@ -129,6 +147,69 @@
 				0EBEC1FE25D31C2400928C23 /* Info.plist */,
 			);
 			path = RestaurantUITests;
+			sourceTree = "<group>";
+		};
+		0EBEC20D25D31C4A00928C23 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0EBEC1D725D31BFE00928C23 /* AppDelegate.swift */,
+				0EBEC1D925D31BFE00928C23 /* SceneDelegate.swift */,
+				0EBEC1DD25D31BFE00928C23 /* Main.storyboard */,
+				0EBEC20E25D31C7900928C23 /* Assets */,
+				0EBEC1E325D31C2300928C23 /* Assets.xcassets */,
+				0EBEC1E525D31C2300928C23 /* LaunchScreen.storyboard */,
+				0EBEC22425D31C8700928C23 /* README.md */,
+				0EBEC1E025D31BFE00928C23 /* Restaurant.xcdatamodeld */,
+				0EBEC1E825D31C2300928C23 /* Info.plist */,
+			);
+			path = "Support Files";
+			sourceTree = "<group>";
+		};
+		0EBEC20E25D31C7900928C23 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				0EBEC20F25D31C7900928C23 /* images */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		0EBEC20F25D31C7900928C23 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				0EBEC21025D31C7900928C23 /* ta-logo.pdf */,
+				0EBEC21125D31C7900928C23 /* ta-bubbles-full.pdf */,
+				0EBEC21225D31C7900928C23 /* tf-logo.pdf */,
+				0EBEC21325D31C7900928C23 /* ta-bubbles-half.pdf */,
+				0EBEC21425D31C7900928C23 /* food.pdf */,
+				0EBEC21525D31C7900928C23 /* share.pdf */,
+				0EBEC21625D31C7900928C23 /* location.pdf */,
+				0EBEC21725D31C7900928C23 /* solid-heart.pdf */,
+				0EBEC21825D31C7900928C23 /* cash.pdf */,
+				0EBEC21925D31C7900928C23 /* ta-bubbles-empty.pdf */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		0EBEC22625D31C8D00928C23 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0EBEC1DB25D31BFE00928C23 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0EBEC22725D31C8F00928C23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0EBEC22825D31C9200928C23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,9 +315,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EBEC21E25D31C7900928C23 /* food.pdf in Resources */,
+				0EBEC21F25D31C7900928C23 /* share.pdf in Resources */,
 				0EBEC1E725D31C2300928C23 /* LaunchScreen.storyboard in Resources */,
 				0EBEC1E425D31C2300928C23 /* Assets.xcassets in Resources */,
+				0EBEC21A25D31C7900928C23 /* ta-logo.pdf in Resources */,
+				0EBEC22025D31C7900928C23 /* location.pdf in Resources */,
+				0EBEC22125D31C7900928C23 /* solid-heart.pdf in Resources */,
+				0EBEC21C25D31C7900928C23 /* tf-logo.pdf in Resources */,
 				0EBEC1DF25D31BFE00928C23 /* Main.storyboard in Resources */,
+				0EBEC22325D31C7900928C23 /* ta-bubbles-empty.pdf in Resources */,
+				0EBEC22525D31C8700928C23 /* README.md in Resources */,
+				0EBEC21D25D31C7900928C23 /* ta-bubbles-half.pdf in Resources */,
+				0EBEC21B25D31C7900928C23 /* ta-bubbles-full.pdf in Resources */,
+				0EBEC22225D31C7900928C23 /* cash.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,7 +462,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -425,7 +517,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
