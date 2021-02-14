@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		0EBEC1D825D31BFE00928C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBEC1D725D31BFE00928C23 /* AppDelegate.swift */; };
 		0EBEC1DA25D31BFE00928C23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBEC1D925D31BFE00928C23 /* SceneDelegate.swift */; };
-		0EBEC1DC25D31BFE00928C23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBEC1DB25D31BFE00928C23 /* ViewController.swift */; };
-		0EBEC1DF25D31BFE00928C23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC1DD25D31BFE00928C23 /* Main.storyboard */; };
+		0EBEC1DC25D31BFE00928C23 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBEC1DB25D31BFE00928C23 /* RestaurantViewController.swift */; };
 		0EBEC1E225D31BFE00928C23 /* Restaurant.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0EBEC1E025D31BFE00928C23 /* Restaurant.xcdatamodeld */; };
 		0EBEC1E425D31C2300928C23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC1E325D31C2300928C23 /* Assets.xcassets */; };
 		0EBEC1E725D31C2300928C23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EBEC1E525D31C2300928C23 /* LaunchScreen.storyboard */; };
@@ -50,8 +49,7 @@
 		0EBEC1D425D31BFE00928C23 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBEC1D725D31BFE00928C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EBEC1D925D31BFE00928C23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0EBEC1DB25D31BFE00928C23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0EBEC1DE25D31BFE00928C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0EBEC1DB25D31BFE00928C23 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		0EBEC1E125D31BFE00928C23 /* Restaurant.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Restaurant.xcdatamodel; sourceTree = "<group>"; };
 		0EBEC1E325D31C2300928C23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EBEC1E625D31C2300928C23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 			children = (
 				0EBEC1D725D31BFE00928C23 /* AppDelegate.swift */,
 				0EBEC1D925D31BFE00928C23 /* SceneDelegate.swift */,
-				0EBEC1DD25D31BFE00928C23 /* Main.storyboard */,
 				0EBEC20E25D31C7900928C23 /* Assets */,
 				0EBEC1E325D31C2300928C23 /* Assets.xcassets */,
 				0EBEC1E525D31C2300928C23 /* LaunchScreen.storyboard */,
@@ -193,7 +190,7 @@
 		0EBEC22625D31C8D00928C23 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0EBEC1DB25D31BFE00928C23 /* ViewController.swift */,
+				0EBEC1DB25D31BFE00928C23 /* RestaurantViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -323,7 +320,6 @@
 				0EBEC22025D31C7900928C23 /* location.pdf in Resources */,
 				0EBEC22125D31C7900928C23 /* solid-heart.pdf in Resources */,
 				0EBEC21C25D31C7900928C23 /* tf-logo.pdf in Resources */,
-				0EBEC1DF25D31BFE00928C23 /* Main.storyboard in Resources */,
 				0EBEC22325D31C7900928C23 /* ta-bubbles-empty.pdf in Resources */,
 				0EBEC22525D31C8700928C23 /* README.md in Resources */,
 				0EBEC21D25D31C7900928C23 /* ta-bubbles-half.pdf in Resources */,
@@ -354,7 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EBEC1E225D31BFE00928C23 /* Restaurant.xcdatamodeld in Sources */,
-				0EBEC1DC25D31BFE00928C23 /* ViewController.swift in Sources */,
+				0EBEC1DC25D31BFE00928C23 /* RestaurantViewController.swift in Sources */,
 				0EBEC1D825D31BFE00928C23 /* AppDelegate.swift in Sources */,
 				0EBEC1DA25D31BFE00928C23 /* SceneDelegate.swift in Sources */,
 			);
@@ -392,14 +388,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0EBEC1DD25D31BFE00928C23 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0EBEC1DE25D31BFE00928C23 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0EBEC1E525D31C2300928C23 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -534,7 +522,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U4M526LLNP;
-				INFOPLIST_FILE = Restaurant/Info.plist;
+				INFOPLIST_FILE = "Restaurant/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -553,7 +541,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U4M526LLNP;
-				INFOPLIST_FILE = Restaurant/Info.plist;
+				INFOPLIST_FILE = "Restaurant/Support Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
