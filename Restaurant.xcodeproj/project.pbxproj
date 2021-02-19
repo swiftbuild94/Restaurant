@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0E8C757625DF61C9008EF84A /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8C757525DF61C9008EF84A /* Restaurant.swift */; };
+		0E8C757B25DF661D008EF84A /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E8C757A25DF661A008EF84A /* test.json */; };
 		0EBEC1D825D31BFE00928C23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBEC1D725D31BFE00928C23 /* AppDelegate.swift */; };
 		0EBEC1DA25D31BFE00928C23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBEC1D925D31BFE00928C23 /* SceneDelegate.swift */; };
 		0EBEC1DC25D31BFE00928C23 /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EBEC1DB25D31BFE00928C23 /* RestaurantViewController.swift */; };
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		0E8C757525DF61C9008EF84A /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		0E8C757A25DF661A008EF84A /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		0EBEC1D425D31BFE00928C23 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EBEC1D725D31BFE00928C23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EBEC1D925D31BFE00928C23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 		0EBEC20D25D31C4A00928C23 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				0E8C757A25DF661A008EF84A /* test.json */,
 				0EBEC1D725D31BFE00928C23 /* AppDelegate.swift */,
 				0EBEC1D925D31BFE00928C23 /* SceneDelegate.swift */,
 				0EBEC20E25D31C7900928C23 /* Assets */,
@@ -320,6 +323,7 @@
 				0EBEC1E725D31C2300928C23 /* LaunchScreen.storyboard in Resources */,
 				0EBEC1E425D31C2300928C23 /* Assets.xcassets in Resources */,
 				0EBEC21A25D31C7900928C23 /* ta-logo.pdf in Resources */,
+				0E8C757B25DF661D008EF84A /* test.json in Resources */,
 				0EBEC22025D31C7900928C23 /* location.pdf in Resources */,
 				0EBEC22125D31C7900928C23 /* solid-heart.pdf in Resources */,
 				0EBEC21C25D31C7900928C23 /* tf-logo.pdf in Resources */,
