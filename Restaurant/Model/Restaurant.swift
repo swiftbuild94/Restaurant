@@ -10,17 +10,17 @@ import Foundation
 struct Restaurant: Decodable {
 	
 	var id: Int?
-	var name: String? = "Katmandou Café"
-	var address: String? = "14, rue Bréguet"
-	var city: String? = "Paris"
+	var name: String?
+	var address: String?
+	var city: String?
 	var zipcode: Int?
 	var currency_code: String?
-	var speciality: String? = "Indian"
-	var card_price: Int? = 27
-	var avg_rate: Float? = 9.2
-	var rate_count: Int? = 5552
-	var tripadvisor_avg_rate: Int? = 4
-	var tripadvisor_rate_count: Int? = 205
+	var speciality: String?
+	var card_price: Int?
+	var avg_rate: Float?
+	var rate_count: Int?
+	var tripadvisor_avg_rate: Int?
+	var tripadvisor_rate_count: Int?
 	var gps_lat: Float?
 	var gps_long: Float?
 	var url: String?
