@@ -13,7 +13,7 @@ struct Restaurant: Decodable {
 	var name: String?
 	var address: String?
 	var city: String?
-	var zipcode: Int?
+	var zipcode: String?
 	var currency_code: String?
 	var speciality: String?
 	var card_price: Int?
@@ -23,16 +23,16 @@ struct Restaurant: Decodable {
 	var tripadvisor_rate_count: Int?
 	var gps_lat: Float?
 	var gps_long: Float?
-	var url: String?
+	var url: URL?
 	var pics_diaporama: [String]?
 	
-	mutating func decodeJson(data: String)-> Bool {
-		let jsonData = data.data(using: .utf8)!
-		let restaurant = try? JSONDecoder().decode(Restaurant.self, from: jsonData)
-		if let result = restaurant {
-			print(result)
+	mutating func decodeJson(jsonData: Data)-> Bool {
+		do {
+			let restaurant = try JSONDecoder().decode(Restaurant.self, from: jsonData)
+			print(restaurant)
 			return true
-		}else{
+		} catch {
+			print(error)
 			return false
 		}
 	}

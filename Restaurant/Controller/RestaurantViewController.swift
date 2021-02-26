@@ -13,10 +13,25 @@ class RestaurantViewController: UIViewController {
 	private let url = "https://ptitchevreuil.github.io/test.json"
 	
 	
+	private func displayName() {
+		let layout = view.layoutMarginsGuide
+		
+		if let name = restaurant.name {
+			print(name)
+			let textLabel = UILabel()
+			textLabel.text = name
+			view.addSubview(textLabel)
+			textLabel.translatesAutoresizingMaskIntoConstraints = false
+			textLabel.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+			textLabel.leadingAnchor.constraint(equalTo: layout.leadingAnchor).isActive = true
+			
+		}
+	}
+	
 	
 	private func displayView() {
 //		displayImages()
-//		displayName()
+		displayName()
 		/*
 		if let address = restaurant.address {
 			let fullAddress = address + ", " + restaurant.city!
@@ -50,19 +65,16 @@ class RestaurantViewController: UIViewController {
 	
 	// MARK: - Get Json
 	private func getJson(){
-		print("getJson")
 		guard let url = URL(string: self.url) else { return }
 		let task = URLSession.shared.dataTask(with: url){
 			(data, response, error) in
-			guard let data = data else { return }
-			print("Data: \(data)")
-			let serializedData = try? JSONSerialization.jsonObject(with: data, options: .allowFragments)
-			guard let json_data = serializedData as? String else { return }
-			let gotData = self.restaurant.decodeJson(data: json_data)
-			print("Zip code: \(String(describing: self.restaurant.zipcode))")
+			guard let newData = data else { return }
+			let gotData = self.restaurant.decodeJson(jsonData: newData)
 			if gotData {
-				self.loadingSpinner.stopAnimating()
-				self.displayView()s
+				DispatchQueue.main.async{
+					self.loadingSpinner.stopAnimating()
+					self.displayView()
+				}
 			}
 		}
 		task.resume()
@@ -75,7 +87,6 @@ class RestaurantViewController: UIViewController {
 		self.showSpinner()
 		getJson()
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
 	}
 
 }
