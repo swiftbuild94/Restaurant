@@ -30,7 +30,6 @@ struct Restaurant: Decodable {
 		print("Decode Json")
 		do {
 			let restaurant = try JSONDecoder().decode(Restaurant.self, from: jsonData)
-			print(restaurant)
 			return restaurant
 		} catch {
 			print(error)
