@@ -26,14 +26,15 @@ struct Restaurant: Decodable {
 	var url: URL?
 	var pics_diaporama: [String]?
 	
-	mutating func decodeJson(jsonData: Data)-> Bool {
+	mutating func decodeJson(jsonData: Data)->Restaurant? {
+		print("Decode Json")
 		do {
 			let restaurant = try JSONDecoder().decode(Restaurant.self, from: jsonData)
 			print(restaurant)
-			return true
+			return restaurant
 		} catch {
 			print(error)
-			return false
+			return nil
 		}
 	}
 	

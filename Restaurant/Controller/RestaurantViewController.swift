@@ -9,27 +9,25 @@ import UIKit
 
 class RestaurantViewController: UIViewController {
 	
-	private var restaurant = Restaurant()
+	private var restaurant: Restaurant?
 	private let url = "https://ptitchevreuil.github.io/test.json"
 	
 	
+	
 	private func displayName() {
-		let layout = view.layoutMarginsGuide
-		
-		if let name = restaurant.name {
-			print(name)
+//		let layout = view.layoutMarginsGuide
+		if let name = restaurant?.name {
+			print("Restaurant: \(String(describing: restaurant?.name!))")
 			let textLabel = UILabel()
 			textLabel.text = name
 			view.addSubview(textLabel)
-			textLabel.translatesAutoresizingMaskIntoConstraints = false
-			textLabel.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-			textLabel.leadingAnchor.constraint(equalTo: layout.leadingAnchor).isActive = true
-			
+			textLabel.center = view.center
 		}
 	}
 	
 	
 	private func displayView() {
+		view.backgroundColor = .white
 //		displayImages()
 		displayName()
 		/*
@@ -69,8 +67,10 @@ class RestaurantViewController: UIViewController {
 		let task = URLSession.shared.dataTask(with: url){
 			(data, response, error) in
 			guard let newData = data else { return }
-			let gotData = self.restaurant.decodeJson(jsonData: newData)
-			if gotData {
+			self.restaurant = Restaurant()
+			self.restaurant = self.restaurant?.decodeJson(jsonData: newData)
+			if self.restaurant != nil {
+				print("GName: \(String(describing: self.restaurant?.name))")
 				DispatchQueue.main.async{
 					self.loadingSpinner.stopAnimating()
 					self.displayView()
@@ -83,7 +83,7 @@ class RestaurantViewController: UIViewController {
 	
 	// MARK: - View Lifecycle
 	override func viewDidLoad() {
-		view.backgroundColor = .white
+		view.backgroundColor = .orange
 		self.showSpinner()
 		getJson()
 		super.viewDidLoad()
