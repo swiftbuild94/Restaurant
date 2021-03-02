@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import MapKit
 
-class RestaurantViewController: UIViewController {
+class RestaurantViewController: UIViewController, MKMapViewDelegate {
 	
 	private var restaurant: Restaurant?
 	private let url = "https://ptitchevreuil.github.io/test.json"
@@ -20,14 +21,28 @@ class RestaurantViewController: UIViewController {
 	
 	
 	// MARK: - DisplayView
+//	private let backButton: UIButton = {
+//		let backButton = UIButton()
+//		backButton.setImage(UIImage(named: "back"))
+//		return backButton
+//	}
+	private let shareButton: UIButton = {
+		let shareButton = UIButton()
+		shareButton
+	}
+	private let loveButton: UIButton = {
+		let loveButton = UIButton()
+		loveButton.setImage(UIImage(named: "solid-heart"))
+		return loveButton
+	}
 	private let photoImageView = UIImageView()
+	private let countImages = UITextView()
 	private let nameTextView =  UITextView()
 	private let addressTextView = UITextView()
-	
-	let button: UIButton = {
-		let button = UIButton()
-		button.setTitle("Book a table", for: .normal)
-		return button
+	private let bookTableButton: UIButton = {
+		let bookTableButton = UIButton()
+		bookTableButton.setTitle("Book a table", for: .normal)
+		return bookTableButton
 	}()
 	
 	
@@ -36,6 +51,11 @@ class RestaurantViewController: UIViewController {
 			displayImages(images)
 			view.addSubview(photoImageView)
 		}
+		// TODO: Show Images Count Button
+		// TODO: Share Button
+		// TODO: Back Button
+		// TODO: Love Button
+		
 		if let name = restaurant?.name {
 			print(name)
 			nameTextView.text = name
@@ -62,8 +82,8 @@ class RestaurantViewController: UIViewController {
 			showInfo(.price, text: fullPrice)
 		}
 		displayMap()
-		view.addSubview(button)
-		view.bringSubviewToFront(button)
+		view.addSubview(bookTableButton)
+		view.bringSubviewToFront(bookTableButton)
 		setupLayout()
 	}
 	
@@ -126,15 +146,16 @@ class RestaurantViewController: UIViewController {
 		nameTextView.isEditable = false
 		nameTextView.isScrollEnabled = false
 		
-		button.translatesAutoresizingMaskIntoConstraints = false
-		button.topAnchor.constraint(equalTo: nameTextView.topAnchor, constant: 10).isActive = true
-		button.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-		button.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 150).isActive = true
-		button.setTitleColor(.white, for: .normal)
-		button.backgroundColor = .green
-		button.layer.cornerRadius = 5
-		button.layer.borderWidth = 1
-		button.layer.borderColor = UIColor.black.cgColor
+		bookTableButton.translatesAutoresizingMaskIntoConstraints = false
+		bookTableButton.topAnchor.constraint(equalTo: nameTextView.topAnchor, constant: 10).isActive = true
+		bookTableButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+		bookTableButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
+		bookTableButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+		bookTableButton.setTitleColor(.white, for: .normal)
+		bookTableButton.backgroundColor = .green
+		bookTableButton.layer.cornerRadius = 5
+		bookTableButton.layer.borderWidth = 1
+		bookTableButton.layer.borderColor = UIColor.black.cgColor
 		
 	}
 	
