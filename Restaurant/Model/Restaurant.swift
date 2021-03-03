@@ -21,20 +21,14 @@ struct Restaurant: Decodable {
 	var rate_count: Int?
 	var tripadvisor_avg_rate: Int?
 	var tripadvisor_rate_count: Int?
-	var gps_lat: Float?
-	var gps_long: Float?
+	var gps_lat: Double?
+	var gps_long: Double?
 	var url: URL?
 	var pics_diaporama: [String]?
 	
 	mutating func decodeJson(jsonData: Data)->Restaurant? {
-		print("Decode Json")
-		do {
-			let restaurant = try JSONDecoder().decode(Restaurant.self, from: jsonData)
-			return restaurant
-		} catch {
-			print(error)
-			return nil
-		}
+		let restaurant = try? JSONDecoder().decode(Restaurant.self, from: jsonData)
+		return restaurant
 	}
 	
 }
