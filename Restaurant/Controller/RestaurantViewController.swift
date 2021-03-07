@@ -57,22 +57,22 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate {
 		if countImages != nil, countImages! > 1 {
 			countImagesButton.titleLabel!.text = "See all " + String(countImages!) + " photos >"
 			countImagesButton.setTitleColor(.white, for: .normal)
-			photoImageView.addSubview(countImagesButton)
-			photoImageView.bringSubviewToFront(countImagesButton)
+			topContainerView.addSubview(countImagesButton)
+			topContainerView.bringSubviewToFront(countImagesButton)
 		}
 		// TODO: Back Button
 //		view.addSubview(photoImageView)
 //		view.bringSubviewToFront(bookTableButton)
-		photoImageView.addSubview(shareButton)
-		photoImageView.bringSubviewToFront(shareButton)
-		photoImageView.addSubview(loveButton)
-		photoImageView.bringSubviewToFront(loveButton)
+		topContainerView.addSubview(shareButton)
+		topContainerView.bringSubviewToFront(shareButton)
+		topContainerView.addSubview(loveButton)
+		topContainerView.bringSubviewToFront(loveButton)
 		
 		if let name = restaurant?.name {
 			print(name)
 			nameTextView.text = name
-			view.addSubview(nameTextView)
-			view.bringSubviewToFront(nameTextView)
+			topContainerView.addSubview(nameTextView)
+			topContainerView.bringSubviewToFront(nameTextView)
 		}
 		if let address = restaurant?.address {
 			var fullAddress = address
@@ -100,10 +100,10 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate {
 		view.addSubview(bottomContainerView)
 		if let lat = restaurant?.gps_lat, let long = restaurant?.gps_long {
 			displayMap(lat: lat, long: long)
-			view.addSubview(mapView)
+			bottomContainerView.addSubview(mapView)
 		}
-		view.addSubview(bookTableButton)
-		view.bringSubviewToFront(bookTableButton)
+		bottomContainerView.addSubview(bookTableButton)
+		bottomContainerView.bringSubviewToFront(bookTableButton)
 		setupLayout()
 	}
 	
@@ -151,69 +151,75 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate {
 	
 	// MARK: - Setup Layout
 	private func setupLayout() {
-		topContainerView.backgroundColor = .gray
+		topContainerView.backgroundColor = .white
 		topContainerView.translatesAutoresizingMaskIntoConstraints = false
 		topContainerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-		topContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
+		topContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6).isActive = true
 		topContainerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
 		topContainerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
 		
 		photoImageView.translatesAutoresizingMaskIntoConstraints = false
-		photoImageView.topAnchor.constraint(equalTo: topContainerView.topAnchor, constant: 0).isActive = true
+		photoImageView.topAnchor.constraint(equalTo: topContainerView.topAnchor).isActive = true
 		photoImageView.leftAnchor.constraint(equalTo: topContainerView.leftAnchor).isActive = true
 		photoImageView.rightAnchor.constraint(equalTo: topContainerView.rightAnchor).isActive = true
 		photoImageView.heightAnchor.constraint(equalTo: topContainerView.heightAnchor).isActive = true
+		photo⁄ImageView.frame = CGRect(x: 0, y: 0, width: 100, height: 200)
 		photoImageView.contentMode = UIView.ContentMode.scaleAspectFit
-
+		photoImageView.clipsToBounds = true
+		
 		countImagesButton.translatesAutoresizingMaskIntoConstraints = false
-		countImagesButton.topAnchor.constraint(equalTo: photoImageView.topAnchor, constant: 100).isActive = true
-		countImagesButton.leadingAnchor.constraint(equalTo: photoImageView.leadingAnchor, constant: 10).isActive = true
-		countImagesButton.trailingAnchor.constraint(equalTo: photoImageView.trailingAnchor).isActive = true
-
+		countImagesButton.topAnchor.constraint(equalTo: topContainerView.topAnchor, constant: 400).isActive = true
+		countImagesButton.leadingAnchor.constraint(equalTo: topContainerView.leadingAnchor, constant: 50).isActive = true
+		countImagesButton.trailingAnchor.constraint(equalTo: topContainerView.trailingAnchor).isActive = true
+		countImagesButton.alpha = 0.6
+		countImagesButton.clipsToBounds = true
+		
 		shareButton.translatesAutoresizingMaskIntoConstraints = false
-		shareButton.leadingAnchor.constraint(equalTo: photoImageView.leadingAnchor).isActive = true
-		shareButton.trailingAnchor.constraint(equalTo: photoImageView.trailingAnchor, constant: 10).isActive = true
-		shareButton.topAnchor.constraint(equalTo: photoImageView.topAnchor, constant: 50).isActive = true
-		shareButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-
+		shareButton.leadingAnchor.constraint(equalTo: topContainerView.leadingAnchor).isActive = true
+		shareButton.trailingAnchor.constraint(equalTo: topContainerView.trailingAnchor, constant: 200).isActive = true
+		shareButton.topAnchor.constraint(equalTo: topContainerView.topAnchor, constant: 60).isActive = true
+		shareButton.heightAnchor.constraint(equalToConstant: 80).isActive = true
+		shareButton.alpha = 0.8
+		
 		loveButton.translatesAutoresizingMaskIntoConstraints = false
-		loveButton.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-		loveButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 60).isActive = true
-		loveButton.topAnchor.constraint(equalTo: photoImageView.topAnchor, constant: 10).isActive = true
-		loveButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-
+		loveButton.leadingAnchor.constraint(equalTo: topContainerView.leadingAnchor).isActive = true
+		loveButton.trailingAnchor.constraint(equalTo: topContainerView.trailingAnchor, constant: 300).isActive = true
+		loveButton.topAnchor.constraint(equalTo: topContainerView.topAnchor, constant: 60).isActive = true
+		loveButton.heightAnchor.constraint(equalToConstant: 80).isActive = true
+		loveButton.alpha = 0.8
+		
 		nameTextView.translatesAutoresizingMaskIntoConstraints = false
 		nameTextView.font = UIFont.boldSystemFont(ofSize: 24)
-		nameTextView.topAnchor.constraint(equalTo: photoImageView.bottomAnchor, constant: 0).isActive = true
-		nameTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-		nameTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+		nameTextView.bottomAnchor.constraint(equalTo: topContainerView.bottomAnchor, constant: 0).isActive = true
+		nameTextView.leadingAnchor.constraint(equalTo: topContainerView.leadingAnchor, constant: 5).isActive = true
+		nameTextView.trailingAnchor.constraint(equalTo: topContainerView.trailingAnchor).isActive = true
 		nameTextView.isEditable = false
 		nameTextView.isScrollEnabled = false
-		
-		bottomContainerView.backgroundColor = .yellow
+
+		bottomContainerView.backgroundColor = .gray
 		bottomContainerView.translatesAutoresizingMaskIntoConstraints = false
 		bottomContainerView.topAnchor.constraint(equalTo: topContainerView.bottomAnchor).isActive = true
-		bottomContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
+		bottomContainerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.4).isActive = true
 		bottomContainerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
 		bottomContainerView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-		
+
 		mapView.translatesAutoresizingMaskIntoConstraints = false
 		mapView.topAnchor.constraint(equalTo: bottomContainerView.topAnchor).isActive = true
 		mapView.leftAnchor.constraint(equalTo: bottomContainerView.leftAnchor).isActive = true
 		mapView.rightAnchor.constraint(equalTo: bottomContainerView.rightAnchor).isActive = true
 		mapView.heightAnchor.constraint(equalTo: bottomContainerView.heightAnchor).isActive = true
 		mapView.bottomAnchor.constraint(equalTo: bottomContainerView.bottomAnchor).isActive = true
-		
-//		bookTableButton.translatesAutoresizingMaskIntoConstraints = false
+
+		bookTableButton.translatesAutoresizingMaskIntoConstraints = false
 //		bookTableButton.topAnchor.constraint(equalTo: nameTextView.topAnchor, constant: 50).isActive = true
-//		bookTableButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-//		bookTableButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 30).isActive = true
-//		bookTableButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
-//		bookTableButton.setTitleColor(.white, for: .normal)
-//		bookTableButton.backgroundColor = .green
-//		bookTableButton.layer.cornerRadius = 5
-//		bookTableButton.layer.borderWidth = 1
-//		bookTableButton.layer.borderColor = UIColor.black.cgColor
+		bookTableButton.centerXAnchor.constraint(equalTo: bottomContainerView.centerXAnchor).isActive = true
+		bookTableButton.bottomAnchor.constraint(equalTo: bottomContainerView.bottomAnchor, constant: 50).isActive = true
+		bookTableButton.heightAnchor.constraint(equalToConstant: 30).isActive = true
+		bookTableButton.setTitleColor(.white, for: .normal)
+		bookTableButton.backgroundColor = .green
+		bookTableButton.layer.cornerRadius = 5
+		bookTableButton.layer.borderWidth = 1
+		bookTableButton.layer.borderColor = UIColor.black.cgColor
 	}
 	
 	
@@ -241,7 +247,7 @@ class RestaurantViewController: UIViewController, MKMapViewDelegate {
 			self.restaurant = self.restaurant?.decodeJson(jsonData: newData)
 			if self.restaurant != nil {
 				DispatchQueue.main.async {
-					self.loadingSpinner.stopAnimating()
+				self.loadingSpinner.stopAnimating()
 					self.displayView()
 				}
 			}
